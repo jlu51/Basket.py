@@ -10,8 +10,8 @@ def main():
     temp_list = []
     #name_list = create_name_list()
     #item_list = create_item_list()
-    name_list = [Person("Jonathan", 0), Person("Samuel", 0), Person("Anthony", 0)]
-    item_list = [Item("Pears", 50), Item("Meat", 100)]
+    name_list = [Person("Jonathan", 0), Person("Sulman", 0), Person("Henry", 0)]
+    item_list = [Item("Condoms", 100), Item("Pears", 50)]
     for i in range(len(item_list)):
         Label(master, text=item_list[i].name).grid(row=i + 1, stick=W)
         for j in range(len(name_list)):
@@ -138,33 +138,3 @@ def check(var):
 
 main()
 
-
-'''
-for i in range(len(item_list)):
-        Label(master, text=item_list[i].name).grid(row=i + 1, stick=W)
-    for j in range(len(name_list)):
-        Label(master, text=name_list[j].name).grid(row=0, column=j + 1)
-        for k in range(len(item_list)):
-            var = IntVar()
-            Checkbutton(master, text=k, variable=var).grid(row=k + 1, column=j + 1)
-            if k is not 0 and j is not 0:
-                temp_list.append(var)
-        a_list.append(temp_list)
-
-'''
-
-
-
-'''
-
-    for i in range(len(item_list) + 1):
-        Label(master, text=name_list[i].name).grid(row=0, column=i + 1)
-        for j in range(len(name_list) + 1):
-            Label(master, text=item_list[i].name).grid(row=i + 1)
-            var1 = IntVar()
-            Checkbutton(master, text="", variable=var1).grid(row=i + 1, column=j)
-            intVar_List.append(var1)
-    for k in intVar_List:
-        if check(k):
-            print(k.get())
-'''
